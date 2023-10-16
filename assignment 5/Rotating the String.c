@@ -4,18 +4,20 @@
 
 int main()
 {
+    // left rotation
     char s[50];
     printf("Enter String");
     scanf("%s",&s);
     int x;
-    x=strlen(s);
-    strcat(s,s);
-    for(int i=0;i<strlen(s)-x-1;i++)
+    x=strlen(s);//contains length
+   for(int i=0;i<x;i++)
     {
-        for(int j=i;j<x+i;j++)
+        for(int j=i;j<x;j++)//shifting elements one by one 
         {
             printf("%c",s[j]);
         }
-        printf(",");
+        for(int k = 0;k<i;k++)//adding the left character at the end 
+        printf("%c",s[k]);
+        printf("\n");
     }
 }
